@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book List</title>
+  <!-- Thêm Bootstrap CSS từ CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="container mt-5">
+    <a href="/book/create">Đăng sách nè</a>
+    <hr>
+    <a href="/me/stored/book">Sách của tôi</a>
+    <h1 class="mb-4">List of Books</h1>
+    <div class="row">
+      <!-- Card 1 -->
+       <% books.forEach(function(book){ %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+            <a href="/book/<%= book.slug %>">
+                <img src="<%= book.image %>" class="card-img-top" alt="Book Image">
+            </a>
+          <div class="card-body">
+            <h5 class="card-title"><%= book.name%></h5>
+            <p class="card-text"><%= book.desciption %></p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+  <!-- Thêm Bootstrap JS từ CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

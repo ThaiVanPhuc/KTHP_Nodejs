@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "init": "^0.1.2",
+    "KTHP": "file:",
+    "KTHP_Nodejs": "file:",
+    "method-override": "^3.0.0",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.0",
+    "mongoose-slug-generator": "^1.0.4",
+    "mongoose-slug-updater": "^3.3.0",
+    "nodemon": "^3.1.7"
+  },
+  "name": "KTHP",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.8.0"
+  }
+}
